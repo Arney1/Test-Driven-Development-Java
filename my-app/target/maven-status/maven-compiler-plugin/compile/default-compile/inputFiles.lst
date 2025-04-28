@@ -2,3 +2,5 @@
 /home/arney1/Documents/School/Spring 2025/Programming Techniques/P/10/my-app/src/main/java/com/mycompany/app/App.java
 /home/arney1/Documents/School/Spring 2025/Programming Techniques/P/10/my-app/src/main/java/com/mycompany/app/Flight.java
 /home/arney1/Documents/School/Spring 2025/Programming Techniques/P/10/my-app/src/main/java/com/mycompany/app/Passenger.java
+/home/arney1/Documents/School/Spring 2025/Programming Techniques/P/10/my-app/src/main/java/com/mycompany/app/flights/BusinessFlight.java
+/home/arney1/Documents/School/Spring 2025/Programming Techniques/P/10/my-app/src/main/java/com/mycompany/app/flights/EconomyFlight.java

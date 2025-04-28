@@ -1,4 +1,6 @@
 com/mycompany/app/Airport.class
 com/mycompany/app/Flight.class
 com/mycompany/app/App.class
+com/mycompany/app/flights/EconomyFlight.class
+com/mycompany/app/flights/BusinessFlight.class
 com/mycompany/app/Passenger.class

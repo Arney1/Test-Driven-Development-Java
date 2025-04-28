@@ -3,6 +3,8 @@ package com.mycompany.app;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.mycompany.app.flights.BusinessFlight;
+import com.mycompany.app.flights.EconomyFlight;
 import org.junit.jupiter.api.BeforeEach;
 // import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +24,7 @@ public class AirportTest {
 
         @BeforeEach
         void setUp() {
-            economyFlight = new Flight("1", "Economy");
+            economyFlight = new EconomyFlight("1");
         }
 
         @Test
@@ -63,7 +65,7 @@ public class AirportTest {
 
         @BeforeEach
         void setUp() {
-            businessFlight = new Flight("2", "Business");
+            businessFlight = new BusinessFlight("2");
         }
 
         @Test
