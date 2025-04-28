@@ -1,7 +1,8 @@
 package com.mycompany.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+// import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.mycompany.app.flights.BusinessFlight;
 import com.mycompany.app.flights.EconomyFlight;
@@ -88,12 +89,11 @@ public class AirportTest {
             assertEquals(1, businessFlight.getPassengersList().size());
         }
     }
-
     /**
      * Rigorous Test :-)
      */
-    @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
-    }
+    // @Test
+    // public void shouldAnswerWithTrue() {
+    //     assertTrue(true);
+    // }
 }
