@@ -2,12 +2,9 @@ package com.mycompany.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-// import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import com.mycompany.app.flights.BusinessFlight;
 import com.mycompany.app.flights.EconomyFlight;
 import org.junit.jupiter.api.BeforeEach;
-// import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -29,7 +26,7 @@ public class AirportTest {
         }
 
         @Test
-        public void testEconomyFlightRegularPassengers() {
+        void testEconomyFlightRegularPassengers() {
             Passenger mike = new Passenger("Mike", false);
 
             assertEquals("1", economyFlight.getId());
@@ -44,7 +41,7 @@ public class AirportTest {
         }
 
         @Test
-        public void testEconomyFlightVipPassenger() {
+        void testEconomyFlightVipPassenger() {
             Passenger james = new Passenger("James", true);
             assertEquals("1", economyFlight.getId());
             assertEquals(true, economyFlight.addPassenger(james));
@@ -70,10 +67,9 @@ public class AirportTest {
         }
 
         @Test
-        public void testBusinessFlightRegularPassengers() {
+        void testBusinessFlightRegularPassengers() {
             Passenger mike = new Passenger("Mike", false);
 
-            // assertEquals("2", businessFlight.getId());
             assertEquals(false, businessFlight.addPassenger(mike));
             assertEquals(0, businessFlight.getPassengersList().size());
             assertEquals(false, businessFlight.removePassenger(mike));
@@ -81,7 +77,7 @@ public class AirportTest {
         }
 
         @Test
-        public void testBusinessFlightVipPassenger() {
+        void testBusinessFlightVipPassenger() {
             Passenger james = new Passenger("James", true);
             assertEquals(true, businessFlight.addPassenger(james));
             assertEquals(1, businessFlight.getPassengersList().size());
@@ -89,11 +85,4 @@ public class AirportTest {
             assertEquals(1, businessFlight.getPassengersList().size());
         }
     }
-    /**
-     * Rigorous Test :-)
-     */
-    // @Test
-    // public void shouldAnswerWithTrue() {
-    //     assertTrue(true);
-    // }
 }

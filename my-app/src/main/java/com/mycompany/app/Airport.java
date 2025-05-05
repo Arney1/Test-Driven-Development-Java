@@ -2,10 +2,12 @@ package com.mycompany.app;
 
 import com.mycompany.app.flights.BusinessFlight;
 import com.mycompany.app.flights.EconomyFlight;
+import java.util.logging.Logger;
 
 public class Airport {
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(Airport.class.getName());
         Flight economyFlight = new EconomyFlight("1");
         Flight businessFlight = new BusinessFlight("2");
 
@@ -18,13 +20,13 @@ public class Airport {
         businessFlight.addPassenger(mike);
         economyFlight.addPassenger(mike);
 
-        System.out.println("Business flight passengers list: ");
+        logger.info("Business flight passengers list: ");
         for (Passenger passenger : businessFlight.getPassengersList()) {
-            System.out.println(passenger.getName());
+            logger.info(passenger.getName());
         }
-        System.out.println("Economy flight passengers list: ");
+        logger.info("Economy flight passengers list: ");
         for (Passenger passenger : economyFlight.getPassengersList()) {
-            System.out.println(passenger.getName());
+            logger.info(passenger.getName());
         }
     }
 }

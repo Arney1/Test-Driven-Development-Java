@@ -9,7 +9,7 @@ public abstract class Flight {
     private String id;
     protected List<Passenger> passengers = new ArrayList<>();
 
-    public Flight(String id) {
+    protected Flight(String id) {
         this.id = id;
     }
 
@@ -23,11 +23,5 @@ public abstract class Flight {
 
     public abstract boolean addPassenger(Passenger passenger);
 
-    public abstract boolean removePassenger(Passenger passenger); // public String getFlightType() {
-    //     return flightType;
-    // }
-
-    // public void setFlightType(String flightType) {
-    //     this.flightType = flightType;
-    // }
+    public abstract boolean removePassenger(Passenger passenger);
 }
