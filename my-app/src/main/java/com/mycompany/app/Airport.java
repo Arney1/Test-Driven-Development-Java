@@ -2,11 +2,24 @@ package com.mycompany.app;
 
 import com.mycompany.app.flights.BusinessFlight;
 import com.mycompany.app.flights.EconomyFlight;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class Airport {
 
-    public static void main(String[] args) {
+    private List<Flight> flights = new ArrayList<>();
+
+    public Airport() {
+        flights.add(new EconomyFlight("1"));
+        flights.add(new BusinessFlight("2"));
+    }
+
+    public List<Flight> getFlights() {
+        return flights;
+    }
+
+    public void runAirportSimulation() {
         Logger logger = Logger.getLogger(Airport.class.getName());
         Flight economyFlight = new EconomyFlight("1");
         Flight businessFlight = new BusinessFlight("2");
@@ -28,5 +41,10 @@ public class Airport {
         for (Passenger passenger : economyFlight.getPassengersList()) {
             logger.info(passenger.getName());
         }
+    }
+
+    public static void main(String[] args) {
+        Airport airport = new Airport();
+        airport.runAirportSimulation();
     }
 }

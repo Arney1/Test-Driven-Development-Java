@@ -1,5 +1,6 @@
 package com.mycompany.app;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.mycompany.app.flights.BusinessFlight;
@@ -12,7 +13,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Unit test for simple App.
  */
-public class AirportTest {
+class AirportTest {
 
     @DisplayName("Given there is an economy flight")
     @Nested
@@ -84,5 +85,12 @@ public class AirportTest {
             assertEquals(false, businessFlight.removePassenger(james));
             assertEquals(1, businessFlight.getPassengersList().size());
         }
+    }
+
+    @Test
+    void testAirportSimulation() {
+        Airport airport = new Airport();
+        airport.runAirportSimulation();
+        assertAll(() -> assertEquals(2, airport.getFlights().size()));
     }
 }
